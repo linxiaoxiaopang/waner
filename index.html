@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="./base.css" />
+</head>
+<body>
+  <div class="img-wrapper">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+    <img src="./ax.jpg" alt="" class="img">
+  </div>
+  <div class="bottom-btn">
+    <div class="left">
+      重置
+    </div>
+    <div class="right">
+      自动生成爱心
+    </div>
+  </div>
+  <script text="javascript/text">
+   const imgWidth = document.body.clientWidth / 10
+   const imgArr = document.querySelectorAll('img')
+   for (let i = 0; i < imgArr.length; i++) {
+    imgArr[i].style.width = imgWidth + 'px'
+    imgArr[i].onclick = () => {
+      const isActive = imgArr[i].src.indexOf('/ax.jpg') >= 0
+      imgArr[i].src = isActive ? './ax_active.jpg' : './ax.jpg'
+    }
+   }
+   const reset =  document.querySelector('.left')
+   const createLove = document.querySelector('.right')
+   reset.onclick = () => {
+    for (let i = 0; i < imgArr.length; i++) {
+      imgArr[i].src = './ax.jpg' 
+    }
+   }
+   createLove.onclick = () => {
+    let curNum = 0
+    const randomNumArr = [8, 9, 11, 12, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 29, 30, 31, 32, 33, 37, 39, 45]
+    for (let i = 0; i < imgArr.length; i++) {
+      imgArr[i].src = './ax.jpg' 
+    }
+    for (let i = 0; i < randomNumArr.length; i++) {
+      setTimeout(() => {
+        curNum++
+        imgArr[randomNumArr[i]].src = './ax_active.jpg'
+        if (curNum === randomNumArr.length) {
+          setTimeout(() => {
+            alert('婉儿老婆， 爱你喔！么么哒！')
+            imgArr[randomNumArr[i]]
+           }, 500)
+        }
+      }, 100 * i)
+     
+    }
+   }
+  </script>
+</body>
+</html>
